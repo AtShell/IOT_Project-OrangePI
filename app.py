@@ -3,7 +3,7 @@ import OPi.GPIO as GPIO
 from time import sleep
 from flask import Flask,render_template
 app = Flask(__name__)
-PIN=7
+PIN=7 #(26 pin)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(PIN,GPIO.OUT)
 GPIO.output(PIN,GPIO.LOW)
