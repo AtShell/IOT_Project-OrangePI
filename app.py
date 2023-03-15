@@ -12,7 +12,10 @@ wsgi_app = app.wsgi_app
 @app.route("/")
 def home():
     ledStat=GPIO.input(PIN)
-    return render_template('index.html', **ledStat)
+    data={
+        'led' : ledStat
+        }
+    return render_template('index.html', **data)
 @app.route("/<action>")
 def action(action):
     if action == "on":
@@ -20,6 +23,9 @@ def action(action):
     if action == "off":
         GPIO.output(PIN,GPIO.LOW)
     ledStat=GPIO.input(PIN)
-    return render_template('index.html',**ledStat)
+    data={
+        'led' : ledStat
+        }
+    return render_template('index.html',**data)
 
 app.run (host="0.0.0.0", port=8500)
