@@ -30,6 +30,9 @@
     <Compile Include="app.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="static\style.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="templates\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
@@ -45,6 +48,7 @@
     </Interpreter>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="static\" />
     <Folder Include="templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
