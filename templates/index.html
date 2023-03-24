@@ -4,10 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <title>Orange Pi LED</title>
+    <link rel="stylesheet" href="../static/style.css"/>
 </head>
 <body>
-    <h2>LED turn {{led}}</h2>
-    <a href="/off">TURN OFF</a><br /><br />
-    <a href="/on">TURN ON</a>
+    <h2>LED  
+    {%if led==1%}
+        <a href="/off" class="button_off">TURN OFF</a>
+    {%else%}
+        <a href="/on" class="button_on">TURN ON</a>
+    {%endif%}
+    </h2><br>
 </body>
 </html>
